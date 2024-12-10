@@ -1,105 +1,256 @@
-/* General Styling */
+
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    background-color: #f4f4f4; 
-    color: #333; 
-    line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #ffffff; /* White */
+  color: #000000; /* Black */ 
+  line-height: 2.0;
+  border-radius: 10px;
+}
+
+.outer-container {
+  background-color: #296777; /* Teal */ 
+  padding: 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1 20px;
+  background-color: #ffffff; 
+  border-radius: 10px;
+  flex: 1;
 }
 
 header {
-    background-color: #fff; /* White header */
-    color: #333; /* Dark gray header text */
-    padding: 1rem 0;
-    text-align: center;
-    border-bottom: 1px solid #ddd; /* Subtle border below header */
+  background-color: #ffffff;
+  padding: 1rem 0;
+  border-radius: 10px;
+}
+
+.logo {
+  float: left;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #000000; /* Black */ 
+  text-decoration: none;
+}
+
+nav {
+  float: right;
+  text-align: right;
 }
 
 nav ul {
-    padding: 0;
-    list-style: none;
-    text-align: center;
+  list-style: none;
+  margin: 5px;
+  padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+nav li {
+  display: inline-block;
+  margin-left: 40px;
 }
 
 nav a {
-    color: #333; /* Dark gray navigation links */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  color: #000000; /* Black */ 
+  text-decoration: none;
+  font-weight: bold;
 }
 
-nav a:hover,
-nav a.active {
-    color: #007bff; /* Blue hover/active color */
+footer {
+  background-color: #63a8b4; /* Light blue */
+  color: #000000; /* Black */
+  text-align: center;
+  padding: 2em 0;
+  margin-top: 100px;
+  border-radius: 10px;
 }
 
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+
+/*------------------------------------*/
+/* Index Page (Home) Specific Styles */
+/*------------------------------------*/
+
+#hero {
+  background-color: #ffffff; /* White */ 
+  color: #000000; /* Black */ 
+  padding: 4rem 0;
+  text-align: center;
+  border-radius: 10px;
 }
 
-#intro {
-    text-align: center;
+#hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
 }
 
-#intro img {
-    display: block;
-    margin: 0 auto 20px;
-    max-width: 200px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.hero-content {
+  flex: 1;
 }
 
-h1, h2, h3 {
-    color: #333;
+.hero-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+  color: #000000; /* Black */ 
+}
+
+#hero img {
+  max-width: 400px;
+  height: auto;
+  flex: 1;
+}
+
+
+/*------------------------------------*/
+/* About Page Specific Styles */
+/*------------------------------------*/
+
+#about {
+  padding: 1rem 1;  
+}
+
+.about-content h2 {
+  color: #000000; /* Black */ 
+  text-align: center;  
+  margin-bottom: 1rem;  
+}
+
+.about-content p {
+  line-height: 2.5;  
+}
+
+
+/*------------------------------------*/
+/* Interests Page Specific Styles */
+/*------------------------------------*/
+
+#interests {
+  padding: 2rem 0;
+}
+
+#interests h2 {
+  text-align: center;  
+  margin-bottom: 1em;  
+  color: #000000; /* Black */ 
+}
+
+#interests article {
+  text-align: center;
+  margin-bottom: 2rem;  
+}
+
+#interests img {
+  max-width: 100%;  
+  height: auto;
+  display: block;
+  margin: 2em auto;  
+  border-radius: 5px;  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#interests h3 {
+  color: #000000; /* Black */ 
+}
+
+#interests p {
+  color: #000000; /* Black */ 
+}
+
+
+/*------------------------------------*/
+/* Portfolio Page Specific Styles */
+/*------------------------------------*/
+
+#portfolio {
+  padding: 2rem 0;
 }
 
 #portfolio article {
-    margin-bottom: 30px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
 #portfolio img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .modal-button {
-    background-color: #007bff; /* Blue button color */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #60a6a8; /* Updated button color */ 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .modal-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+  background-color: #4a7e81; /* Darker shade on hover */ 
 }
 
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
-footer {
-    background-color: #333; /* Dark gray footer */
-    color: #fff;
-    text-align: center;
-    padding: 0.5rem 0; /* Reduced padding */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  position: relative;
+}
+
+.close-button {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black; 
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal-link {
+  display: block;
+  margin-top: 10px;
+  color: #000000; /* Black */ 
+}
+
+#portfolio h3 {
+  color: #000000; /* Black */ 
+}
+
+#portfolio p {
+  color: #000000; /* Black */ 
 }

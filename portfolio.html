@@ -1,49 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Sayoojya Santhosh</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Sayoojya Santhosh</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <h1>Portfolio</h1>
-    <nav>
-        <ul>
+<div class="outer-container">
+
+  <header role="banner">
+    <div class="header-container">
+      <div class="container">
+        <a href="index.html" class="logo" aria-label="Homepage">Sayoojya Santhosh</a>
+        <nav aria-label="Main Navigation">
+          <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="interests.html">Interests</a></li>
-            <li><a href="portfolio.html" class="active">Portfolio</a></li>
-        </ul>
-    </nav>
-</header>
+            <li><a href="portfolio.html">Portfolio</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-<main id="main-content">
+  <main id="main-content" role="main">
     <section id="portfolio">
-
+      <div class="container">
         <article>
           <h3>Simple Calculator Application</h3> 
           <img src="B:\sayoojya github\New folder\testportfolio\calculator-screenshot.jpeg" alt="Screenshot of the Simple Calculator Application">
           <p>A user-friendly calculator app for basic arithmetic operations.</p>
           <button class="modal-button" data-project="1">View Details</button> 
         </article>
+      </div>
     </section>
 
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" aria-label="Close">&times;</span>
-            <h2 id="modal-title"></h2>
-            <p id="modal-description"></p>
-            <a id="modal-link" href="#" target="_blank">View Project</a>
-        </div>
+    <div id="modal" class="modal" aria-hidden="true" aria-labelledby="modal-title">
+      <div class="modal-content" role="dialog">
+        <span class="close-button" aria-label="Close" role="button" tabindex="0">&times;</span>
+        <h2 id="modal-title" role="heading" aria-level="2"></h2>
+        <p id="modal-description"></p>
+        <a id="modal-link" href="#" target="_blank">View Project</a>
+      </div>
     </div>
-</main>
+  </main>
 
-<footer>
-    <p>&copy; Sayoojya Santhosh - 2024</p>
-</footer>
+  <footer role="contentinfo">
+    <div class="container">
+      <p>&copy; Sayoojya Santhosh - 2024</p>
+    </div>
+  </footer>
+
+</div>
 
 <script src="script.js"></script>
 </body>
